@@ -5,10 +5,12 @@ public class DirectionService {
 
     public DirectionService(TravelMode state) {
         this.state = state;
+        state.setContext(this);
     }
 
     public void changeState(TravelMode state) {
         this.state = state;
+        state.setContext(this);
     }
     
     public Object getEta() {
